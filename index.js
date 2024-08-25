@@ -6,6 +6,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(cors({ origin: 'https://bajaj21bci0317.vercel.app' }));
+
 app.get('/', (req, res) => {
     res.send('Welcome to the BFHL API! Use /bfhl for GET and POST requests.');
 });
